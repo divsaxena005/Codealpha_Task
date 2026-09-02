@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    background-color: gray;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.gallery{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3,0fr);
+}
+
+.gallery img{
+    width: 200px;
+    height: 100px;
+    /*border-radius: 10px;*/
+    box-shadow: inset;
+    transition: transition 0.3s ease;
+}
+
+.gallery img:hover{
+    transform: scale(1.06);
+}
+
+.lightbox{
+    width: 800px;
+    height: 400px;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: fixed;
+    gap:30px
+}
+
+.lightbox img{
+    width: 800px;
+    max-width: 500%;
+    max-height: 80%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+.lightbox button{
+    font-size: 70px;
+    padding: 10px 16px;
+    display: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
